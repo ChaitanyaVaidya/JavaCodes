@@ -1,0 +1,23 @@
+package Part2;
+
+public class EvenFirst {
+	public static void main(String[] args) {
+		int [] n= {3,5,2,4,7,8};
+		int temp=0;
+		for (int i = 0; i < n.length; i++) {
+			
+			for (int j = i+1; j < n.length; j++) {
+				
+				if(n[j]%2==0) {
+					temp=n[i];
+					n[i]=n[j];
+					n[j]=temp;
+				}
+			}
+		}
+		for (int i = 0; i < n.length; i++) {
+			System.out.println(n[i]);
+		}
+	}
+
+}
